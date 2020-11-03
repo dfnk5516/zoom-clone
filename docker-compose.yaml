@@ -1,0 +1,17 @@
+# nginx 이미지를 지정
+nginx:
+  build: ./nginx
+  # nginx컨테이너는 node컨테이너를 연결
+  links:
+    - node
+  ports:
+    - "80:80"
+    - "443:443"
+    - "3031:3032"
+
+# node 이미지를 지정
+node:
+  build: ./node
+  ports:
+    - "3030:3030"
+    - "3032:3031"

@@ -1,6 +1,7 @@
-# ZOOM-CLONE
 ```bash
-npm run devStart
-npm install -g peer
-peerjs --port 3001
+apt update
+apt install certbot
+apt install python-certbot-nginx
+nginx -t
+certbot --nginx -d www.rayshoo.com
 ```
